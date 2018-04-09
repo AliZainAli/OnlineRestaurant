@@ -1,0 +1,35 @@
+{% extends 'res/home.html' %}
+{% block content %}
+
+    <table class="table table-striped table-bordered" style="text-align: left ; border-color: black;">
+        <thead>
+            <tr style="font: bold 20px Tahoma;">
+                <th style="width: 55% ;">Type</th>
+                <th style="width: 15% ;"></th>
+                <th style="width: 15% ;">Price</th>
+                <th style="color: white; font: bold 20px Tahoma ; width: 15% ; text-shadow: 2px 2px 2px black, 0 0 25px blue, 0 0 5px darkblue;">HUNGRY !</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in items %}
+            <tr>
+                <td>
+                    <h5>{{ item.name }}</h5>
+                    <p>{{ item.details }}</p>
+                </td>
+                <td>
+                    <!-- image not appearing -->
+                    <img src="{{item.item_logo.url}}">
+                </td>
+                <td style="text-align: center; vertical-align:middle;">
+                    {{ item.price }}
+                </td>
+                <td style="text-align: center; vertical-align:middle;" >
+                    <button type="button" class="btn btn-success" style="margin: 5px ;" onclick="additem('{{ item.name }}', {{ item.price }} ) ;">Add</button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

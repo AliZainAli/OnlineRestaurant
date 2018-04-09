@@ -1,0 +1,43 @@
+* {
+    margin: 0 px;
+    padding: 0px ;
+}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    font: bold 15px Tahoma ;
+    letter-spacing: 1px ;
+}
+ul.topnav li {
+    float: left;
+}
+ul.topnav li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.topnav li a.current{
+    color: orange ;
+    background-color: grey ;
+    font-size: large ;
+}
+
+table.table-bordered > thead > tr > th{
+    border:2px solid black;
+}
+table.table-bordered > tbody > tr > td{
+    border:2px solid grey;
+}
+#btnl {
+    margin: 5px ;
+    background-color: red;
+}
+table td input , table td button {
+    font-size: large ;
+}

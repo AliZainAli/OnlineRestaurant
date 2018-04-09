@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Restaurant</title>
+
+  <script src="js/site.js"></script>
+  <link rel="stylesheet" href="{% static 'res/bootstrap/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'res/main.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="{% static 'res/bootstrap/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'res/site.js' %}"></script>
+</head>
+<body>
+    <header>
+        <img src="{% static 'res/images/2.JPG' %}" alt="Happy Meal" width= "100% ;" height=150px ; >
+    </header>
+
+    <ul class="topnav">
+        {% for category in all_categories %}
+        <li><a href="{% url 'res:detail' category.category_title %}" >{{ category.category_title }}</a></li>
+        {% endfor %}
+    </ul>
+    {% block section %}
+    {% endblock %}
+</body>
+</html>

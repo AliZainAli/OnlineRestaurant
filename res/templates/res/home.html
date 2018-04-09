@@ -1,0 +1,40 @@
+{% extends 'res/base.html' %}
+{% block section %}
+
+    <section>
+        <div class="container-fluid">
+          <h1 style="margin: 20px 10px 10px 10px ;">Choose Items</h1>
+          <div class="row" >
+            <div class="col-md-8" style="background-color: #FAFAFA ;" id="menu">
+              <div id="pizza_menu">
+                  {% block content %}
+                  {% endblock %}
+              </div>
+            </div>
+            <div class="col-md" style="background-color: #D9FFFA; font-size:18px; text-align: left ;" id="order">
+              <h1 style="margin-bottom: 10px ; text-align: center ;">Your Order</h1>
+              <div class="row">
+                  <div class="col-md-7" style="margin-top: 10px ;" id="selecteditems">
+
+                  </div>
+                  <div class="col-md-2" style="margin-top: 10px ;" id="pr">
+
+                  </div>
+                  <div class="col-md-3" style="margin-top: 8px ; text-align:right;" id="removebtn">
+
+                  </div>
+                  <div>
+                      <p>
+                        total price =
+                          <span id="bill"></span>
+                      </p>
+                  </div>
+                  <div style="text-align: center;" class="well col-sm-12">
+                      <p><button class="btn btn-primary" type="submit">Finish</button></p>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+{% endblock %}
